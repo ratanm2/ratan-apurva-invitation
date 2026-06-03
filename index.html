@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Ratan & Apurva</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Cormorant+Garamond:wght@400;600&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="style.css">
+
+<script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.9.3/dist/confetti.browser.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+</head>
+
+<body>
+
+<!-- MONOGRAM -->
+<section id="intro" class="screen active">
+  <div class="monogram">
+    <div class="letter">R</div>
+    <div class="amp">&</div>
+    <div class="letter">A</div>
+  </div>
+
+  <button id="beginBtn">Begin Experience</button>
+</section>
+
+<!-- SCRATCH REVEAL -->
+<section id="scratchSection" class="screen">
+  <h2>Reveal</h2>
+  <p>Scratch to discover the date</p>
+
+  <div class="scratch-container">
+      <canvas id="scratchCanvas"></canvas>
+
+      <div class="hidden-date">
+          <span>19</span>
+          <span>JUNE</span>
+          <span>2026</span>
+      </div>
+  </div>
+</section>
+
+<!-- CURTAIN -->
+<section id="curtainSection" class="screen">
+    <div class="curtain left"></div>
+    <div class="curtain right"></div>
+
+    <div class="invite-content">
+        <h1>Ratan & Apurva</h1>
+
+        <p>
+        Together with their families request the pleasure of your company
+        at the celebration of their marriage.
+        </p>
+
+        <button id="countdownBtn">
+            Continue
+        </button>
+    </div>
+</section>
+
+<!-- COUNTDOWN -->
+<section id="countdownSection" class="screen">
+
+<h2>Counting Down To Forever</h2>
+
+<div class="countdown">
+
+<div>
+<span id="days">0</span>
+<label>Days</label>
+</div>
+
+<div>
+<span id="hours">0</span>
+<label>Hours</label>
+</div>
+
+<div>
+<span id="minutes">0</span>
+<label>Minutes</label>
+</div>
+
+<div>
+<span id="seconds">0</span>
+<label>Seconds</label>
+</div>
+
+</div>
+
+</section>
+
+<script src="script.js"></script>
+
+</body>
+</html>
