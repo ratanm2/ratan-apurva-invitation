@@ -1,71 +1,110 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 <title>Ratan & Apurva</title>
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Cormorant+Garamond:wght@400;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Cormorant+Garamond:wght@400;600&display=swap" rel="stylesheet">
 
 <link rel="stylesheet" href="style.css">
-
-<script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.9.3/dist/confetti.browser.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
 </head>
-
 <body>
+<div id="loadingScreen"><h1>R & A</h1><p>19 June 2026</p></div>
+<div id="petalContainer"></div>
 
-<!-- MONOGRAM -->
-<section id="intro" class="screen active">
-  <div class="monogram">
-    <div class="letter">R</div>
-    <div class="amp">&</div>
-    <div class="letter">A</div>
-  </div>
+<!-- WELCOME -->
+<audio
+id="bgMusic"
+loop
+preload="auto">
 
-  <button id="beginBtn">Begin Experience</button>
+<source
+src="assets/music/BackgroundMusic.mp3"
+type="audio/mpeg">
+
+</audio>
+
+<section id="welcome" class="screen active">
+
+<div class="monogram">
+<div>R</div>
+<div class="amp">&</div>
+<div>A</div>
+</div>
+
+<button id="openBtn">
+Open Invitation
+</button>
+
 </section>
 
-<!-- SCRATCH REVEAL -->
-<section id="scratchSection" class="screen">
-  <h2>Reveal</h2>
-  <p>Scratch to discover the date</p>
+<!-- SCRATCH -->
 
-  <div class="scratch-container">
-      <canvas id="scratchCanvas"></canvas>
+<section id="scratch" class="screen">
 
-      <div class="hidden-date">
-          <span>19</span>
-          <span>JUNE</span>
-          <span>2026</span>
-      </div>
-  </div>
+<h2>Reveal The Date</h2>
+
+<div class="scratch-wrapper">
+
+<div class="scratch-card">
+<div class="hidden-text">19</div>
+<canvas></canvas>
+</div>
+
+<div class="scratch-card">
+<div class="hidden-text">JUNE</div>
+<canvas></canvas>
+</div>
+
+<div class="scratch-card">
+<div class="hidden-text">2026</div>
+<canvas></canvas>
+</div>
+
+</div>
+
 </section>
 
 <!-- CURTAIN -->
-<section id="curtainSection" class="screen">
-    <div class="curtain left"></div>
-    <div class="curtain right"></div>
 
-    <div class="invite-content">
-        <h1>Ratan & Apurva</h1>
+<section id="curtainScreen" class="screen">
 
-        <p>
-        Together with their families request the pleasure of your company
-        at the celebration of their marriage.
-        </p>
+<div class="curtain left"></div>
+<div class="curtain right"></div>
 
-        <button id="countdownBtn">
-            Continue
-        </button>
-    </div>
+<div class="couple-name">
+<h1>Ratan</h1>
+<span>&</span>
+<h1>Apurva</h1>
+</div>
+
 </section>
 
-<!-- COUNTDOWN -->
-<section id="countdownSection" class="screen">
+<!-- INVITATION -->
 
-<h2>Counting Down To Forever</h2>
+<section id="invitation" class="screen">
+
+<h2>
+With the blessings of Lord Venkateshwara
+</h2>
+
+<p>
+Together with our families,
+we invite you to celebrate
+our wedding ceremony.
+</p>
+
+<button id="continueBtn">
+Continue
+</button>
+</section>
+<section id="countdown" class="screen">
+
+<h2>Countdown To Our Big Day</h2>
 
 <div class="countdown">
 
@@ -91,8 +130,93 @@
 
 </div>
 
+<button id="countdownNext">Continue</button>
+
+</section>
+<section id="haldi" class="screen">
+
+<h2>Haldi Ceremony</h2>
+
+<p>
+18 June 2026
+</p>
+
+<p>
+6:00 PM
+</p>
+
+<p>
+Satyavijay Convention Multipurpose Hall
+</p>
+
+<a
+class="event-btn"
+href="https://maps.app.goo.gl/J47BqnxoFqXGZL2NA?g_st=ic"
+target="_blank">
+
+View Location
+
+</a>
+
+<button id="haldiNext">
+Continue
+</button>
+
 </section>
 
+<section id="wedding" class="screen">
+
+<h2>Wedding Ceremony</h2>
+
+<p>
+19 June 2026
+</p>
+
+<p>
+Muhurat: 12:28 PM
+</p>
+
+<p>
+Satyavijay Convention Multipurpose Hall
+</p>
+
+<a
+class="event-btn"
+href="https://maps.app.goo.gl/J47BqnxoFqXGZL2NA?g_st=ic"
+target="_blank">
+
+View Location
+
+</a>
+
+<button id="weddingNext">
+Continue
+</button>
+
+</section>
+<section id="venue" class="screen">
+
+<h2>
+The Celebration Will Take Place At
+</h2>
+
+<img
+src="assets/images/venue.jpg"
+class="venue-image">
+
+<h3>
+Satyavijay Convention Multipurpose Hall
+</h3>
+
+<p>
+Solapur, Maharashtra
+</p>
+
+<button id="venueNext">Thank You</button>
+</section>
+
+<section id="thankyou" class="screen"><h2>Thank You</h2><p>We look forward to celebrating this special day with you.</p><h3>Ratan & Apurva</h3></section>
+<button id="musicToggle">🔊</button>
 <script src="script.js"></script>
 
 </body>
